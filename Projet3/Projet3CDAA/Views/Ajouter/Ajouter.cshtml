@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Ajouter";
+}
+
+<h2>Ajouter</h2>
+
+@model Projet3CDAA.Models.Produit
+<div>
+    @using (Html.BeginForm("Ajouter", "Ajouter"))
+    {
+        <br/><br/>
+        <p>
+            @Html.LabelFor(p => p.Code)
+            @Html.EditorFor(p => p.Code)
+        </p>
+        <p>
+            @Html.LabelFor(p => p.Nom)
+            @Html.EditorFor(p => p.Nom)
+        </p>
+        <p>
+            @Html.LabelFor(p => p.Prix)
+            @Html.EditorFor(p => p.Prix)
+        </p>
+        <p>
+            @Html.LabelFor(p => p.CatS)
+            @Html.EditorFor(p => p.CatS)
+        </p>
+        <p>
+            @Html.LabelFor(p => p.SousCat)
+            @Html.EditorFor(p => p.SousCat)
+        </p>
+        <p>
+            <input type="submit" value="Valider" />
+        </p>
+    }
+</div>
+

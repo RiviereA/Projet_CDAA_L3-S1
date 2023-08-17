@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Supprimer";
+}
+
+<h2>Supprimer</h2>
+
+<div>
+    @using (Html.BeginForm("Supprimer", "Supprimer", FormMethod.Get))
+    {
+        <p>Code du produit à supprimer ?</p>
+        @Html.TextBox("Supprime")
+        <input type="submit" value="Supprimer" />
+    }
+</div>
+
+<div>
+    @if (ViewBag.Error == "0")
+    {
+        bool supr = Model;
+        if (supr)
+        {
+            <br /><br /><p>Le produit a bien été supprimé</p>
+        }
+    }
+    else
+    {
+        <br /><br /><p>Pas de produit avec ce code</p>
+    }
+</div>

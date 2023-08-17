@@ -1,0 +1,42 @@
+﻿@using Projet3CDAA.Models;
+@{
+    ViewBag.Title = "AfficherCat";
+}
+
+<h2>Afficher</h2>
+
+<div>
+    @using (Html.BeginForm("AfficherCat", "Afficher", FormMethod.Get))
+    {
+        <p>Catégorie cherché ?</p>
+        @Html.TextBox("Recherche")
+        <input type="submit" value="Rechercher" />
+    }
+</div>
+
+<div>
+    @if (ViewBag.Error == "0")
+    {
+        List<Produit> lp = Model;
+        <br/><br/>
+
+        <table>
+            <tbody>
+                @foreach (Produit p in lp)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(_ => p.Code)</td>
+                        <td>@Html.DisplayFor(_ => p.Nom)</td>
+                        <td>@Html.DisplayFor(_ => p.Prix)</td>
+                        <td>@Html.DisplayFor(_ => p.CatS)</td>
+                        <td>@Html.DisplayFor(_ => p.SousCat)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <br/><br/><p>Pas de produit dans cette catégorie</p>
+    }
+</div>

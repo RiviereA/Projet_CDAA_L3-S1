@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>CDAA Application</h1>
+    <h2>Magasin CDAA</h2>
+    <h2>Dijon</h2>
+    <p class="lead">Application de gestion d'un magasin.</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Ajouter un produit</h2>
+        <p>L'application permet d'ajouter un nouveau produit dans le magasin à l'aide d'un formulaire</p><br />
+        <p><a class="btn btn-default" href=@Url.Action("Ajouter","Ajouter")>Ajouter</a></p><br/>
+    </div>
+    <div class="col-md-4">
+        <h2>Lister tous les produits</h2>
+        <p>L'application permet de visualiser tous les produits du catalogue du magasin</p><br />
+        <p><a class="btn btn-default" href=@Url.Action("Lister","Lister")>Lister</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Rechercher un produit</h2>
+        <p>L'application permet de visualiser le détail d'un produit ou d'une catégorie de produit</p><br />
+        <p><a class="btn btn-default" href=@Url.Action("AfficherCode","Afficher")>Rechercher par le code</a></p>
+        <p><a class="btn btn-default" href=@Url.Action("AfficherNom","Afficher")>Rechercher par le nom</a></p>
+        <p><a class="btn btn-default" href=@Url.Action("AfficherCat","Afficher")>Rechercher par catégorie</a></p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Supprimer un produit</h2>
+        <p>L'application permet de supprimer un produit dans le magasin</p><br />
+        <p><a class="btn btn-default" href=@Url.Action("Supprimer", "Supprimer")>Supprimer</a></p>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+﻿@using Projet3CDAA.Models;
+@{
+    ViewBag.Title = "AfficherCode";
+}
+
+<h2>Afficher</h2>
+
+<div>
+    @using(Html.BeginForm("AfficherCode","Afficher",FormMethod.Get))
+    {
+        <p>Code cherché ?</p>
+        @Html.TextBox("Recherche")
+        <input type="submit" value="Rechercher"/>
+    }
+</div>
+
+<div>
+    @if (ViewBag.Error == "0")
+    {
+        List<Produit> lp = Model;
+        <br/><br/>
+        foreach (Produit p in lp)
+        {
+            <tr>
+                <td>@Html.DisplayFor(_ => p.Code)</td>
+                <td>@Html.DisplayFor(_ => p.Nom)</td>
+                <td>@Html.DisplayFor(_ => p.Prix)</td>
+                <td>@Html.DisplayFor(_ => p.CatS)</td>
+                <td>@Html.DisplayFor(_ => p.SousCat)</td>
+            </tr>
+        }
+    }
+    else
+    {
+        <br/><br/><p>Pas de produit avec ce code</p>
+    }
+</div>

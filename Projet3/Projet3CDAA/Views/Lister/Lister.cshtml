@@ -1,0 +1,22 @@
+﻿@using Projet3CDAA.Models;
+@{
+    ViewBag.Title = "Lister";
+}
+
+<h2>Lister</h2>
+
+<table>
+    <thead>
+        <tr>Liste des produits du magasin</tr>
+    </thead>
+    <tbody>
+        @foreach(Produit p in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(_=> p.Code)</td>
+                <td>@Html.DisplayFor(_=> p.Nom)</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
