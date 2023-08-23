@@ -1,4 +1,4 @@
-# Projet de Conception et Développement Avancé d'Applications (L3 Semestre 1)
+# Projet de Conception et Développement Avancé d'Applications (Licence 3 - Semestre 1)
 
 Il s'agit d'un ensemble de projets réalisé au cours du module afin de mettre en pratique les connaissances acquises en cours.
 
